@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="header__user">Logo</div>
+  <div>
+    @if (authService.currentUserSig() == null) {
+    <div class="header__links">
+      <a class="header__link" routerLink="/login">Login</a>
+      <a class="header__link" routerLink="/register">Register</a>
+    </div>
+    } @if (authService.currentUserSig()) {
+    <div class="header__logout">
+      <div class="header__user">
+        CurrentUser: {{ authService.currentUserSig()?.username }}
+      </div>
+      <a
+        routerLink="/login"
+        class="header__link header__link-btn"
+        (click)="logout()"
+        >Logout</a
+      >
+    </div>
+    }
+  </div>
+</header>
