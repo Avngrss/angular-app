@@ -1,20 +1,14 @@
-import { Observable } from 'rxjs';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
-import { ApiserverService } from './services/apiserver.service';
+import { UserlistComponent } from './components/user-list/user-list.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, HeaderComponent, UserlistComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
-  apiServer = inject(ApiserverService);
-
-  ngOnInit(): void {
-    this.apiServer.getUsers();
-  }
-}
+export class AppComponent {}

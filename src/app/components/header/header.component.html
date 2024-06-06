@@ -2,10 +2,10 @@
   <div class="header__user">Logo</div>
   <div>
     @if (authService.currentUserSig() == null) {
-    <div class="header__links">
+    <nav class="header__links">
       <a class="header__link" routerLink="/login">Login</a>
       <a class="header__link" routerLink="/register">Register</a>
-    </div>
+    </nav>
     } @if (authService.currentUserSig()) {
     <div class="header__logout">
       <div class="header__user">

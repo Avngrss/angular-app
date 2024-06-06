@@ -1,14 +1,20 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { LoginComponent } from '../login/login.component';
-import { RegisterComponent } from '../register/register.component';
+import { LoginComponent } from '../../pages/login/login.component';
+import { RegisterComponent } from '../../pages/register/register.component';
 import { AuthService } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [LoginComponent, RegisterComponent, CommonModule, RouterLink],
+  imports: [
+    LoginComponent,
+    RegisterComponent,
+    CommonModule,
+    RouterLink,
+    RouterLinkActive,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
