@@ -2,7 +2,7 @@
 <p>loading....</p>
 }
 <div>
-  @if(users$ | async; as users) { @for (user of users; track user.id) {
-  <h2>{{ user.id }}</h2>
+  @if(users$ | async; as users) { @for (user of users; track user.dob) {
+  <h2>{{ user.dob }}</h2>
   } }
 </div>

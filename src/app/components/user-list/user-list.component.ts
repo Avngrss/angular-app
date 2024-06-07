@@ -20,9 +20,9 @@ export class UserlistComponent implements OnInit {
 
   public ngOnInit(): void {
     this.apiServer.getUsers().subscribe((res) => console.log(res));
-    // this.loading = true;
-    // this.users$ = this.apiServer
-    //   .getUsers()
-    //   .pipe(tap(() => (this.loading = false)));
+    this.loading = true;
+    this.users$ = this.apiServer
+      .getUsers()
+      .pipe(tap(() => (this.loading = false)));
   }
 }
