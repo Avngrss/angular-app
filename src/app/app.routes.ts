@@ -24,4 +24,9 @@ export const routes: Routes = [
     component: HomeComponent,
     redirectTo: '',
   },
+  {
+    path: '',
+    redirectTo: 'Home',
+    pathMatch: 'full',
+  },
 ];

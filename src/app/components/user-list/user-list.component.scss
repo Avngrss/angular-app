@@ -1,0 +1,23 @@
+.table {
+    width: 100%;
+    td {
+        padding: 10px;
+    }
+    &__header {
+        background-color: black;
+        color: white;
+        margin-top: 20px;
+    }
+    &__row {
+        text-align: center;
+    }
+}
+.search {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.example-full-width {
+    width: 100%;
+}
